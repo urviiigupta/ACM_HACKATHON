@@ -1,17 +1,58 @@
 import { useState,useEffect } from 'react'
-import Card from './components/Card'
 import axios from "axios";
 import { v4 as uuidv4 } from 'uuid';
+import Selectbox from "./components/Selectbox"
 function App() {
+  const Datatosend={
+    fromlang:"en",
+    text:"please enter some text",
+    tolang:"es"
+  }
+
+  const Languages=[
+    {
+      langname:"Dutch",
+      langcode: "nl" 
+    },
+    {
+      langname:"English",
+      langcode: "en" 
+    },
+    {
+      langname:"French",
+      langcode: "fr" 
+    },
+    {
+      langname:"Japanese",
+      langcode: "ja" 
+    },
+    {
+      langname:"Hindi",
+      langcode: "hi" 
+     
+    },
+    {
+      langname:"Spanish",
+      langcode: "es" 
+    }
+  ]
   const [to,setto]=useState("");
-  const [from,setfrom]=useState("");
-  const [inp,setinp]=useState("");
+  const [langfrom,setlangfrom]=useState("");
+  const [inp,setinp]=useState(Datatosend);
   const [outp,setoutp]=useState("");
   let key = "fa204c207e8e4f919fe65a32aab41c90";
   let endpoint = "https://api.cognitive.microsofttranslator.com/";
 const handleinpchange=(event)=>{
   setinp(event.target.value)
   console.log(inp)
+}
+
+const handleSelectChangefrom=(event)=>{
+  setlangfrom(event.target.value)
+}
+
+const handleSelectChangeto=(event)=>{
+  setto(event.target.value)
 }
 const getdata=(stringtochange)=>{
 console.log(['fr']);
@@ -28,8 +69,8 @@ axios({
   },
   params: {
       'api-version': '3.0',
-      'from': 'en',
-      'to': 'fr'
+      'from': `${langfrom}`,
+      'to': `${to}`
   },
   data: [{
       'text': `${stringtochange}`
@@ -57,8 +98,13 @@ axios({
 }); }
  return(
   <>
-  <input  value={inp} onChange={handleinpchange} style={{height:"100px", width:"200px"}}>
+  <select>
+
+  </select>
+  <input  value={inp.text} onChange={handleinpchange} style={{height:"100px", width:"200px"}}>
   </input>
+  <Selectbox languages={Languages} handleSelectChange={handleSelectChangefrom}></Selectbox>
+  <Selectbox languages={Languages} handleSelectChange={handleSelectChangeto}></Selectbox>
   <button onClick={() => getdata(inp)}>Submit</button>
   <input  value={outp} style={{height:"100px", width:"200px"}}>
   </input>
