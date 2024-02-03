@@ -17,8 +17,10 @@ function App() {
   const [langfrom,setlangfrom]=useState("en");
   const [inp,setinp]=useState("please enter some text");
   const [outp,setoutp]=useState("");
+  const [chatoutp,setchatoutp]=useState("")
   let key = "fa204c207e8e4f919fe65a32aab41c90";
   let endpoint = "https://api.cognitive.microsofttranslator.com/";
+  const OPENAI_API_KEY="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"
 const handleinpchange=(event)=>{
   setinp(event.target.value)
   console.log(inp)
@@ -57,7 +59,35 @@ axios({
   
   console.log(response.data[0].translations[0].text);
   setoutp(response.data[0].translations[0].text);
-  
+   axios({
+    method: 'post',
+    url: 'https://api.openai.com/v1/chat/completions',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${OPENAI_API_KEY}`
+    },
+    data: {
+      model: 'gpt-3.5-turbo',
+      messages: [
+        {
+          role: 'user',
+          content: `${inp} I translated this text from ${langfrom} to ${to} and this is the result ${outp} can you try and fix what is lost in translation and give back on the newly enhanced text make it poetic and beatuiful in case of poems
+          don't give anything else`
+        }
+      ],
+      temperature: 1,
+      max_tokens: 256,
+      top_p: 1,
+      frequency_penalty: 0,
+      presence_penalty: 0
+    }
+  })
+  .then(response => {
+    setchatoutp(response.data.choices[0].message.content);
+  })
+  .catch(error => {
+    console.error(error);
+  });
   
 }).catch(function(error) {
   if (error.response) {
@@ -97,12 +127,13 @@ axios({
       <div className={styles.messagetofrom}>
         TO: 
       </div>
-  <Selectbox languages={Languages} handleSelectChange={handleSelectChangeto}></Selectbox>
+      <Selectbox languages={Languages} handleSelectChange={handleSelectChangeto}></Selectbox>
+      </div>
+      <textarea  value={chatoutp} className={styles.inputboxx}>
+      </textarea>
+      </div>
   </div>
-  <textarea  value={outp} className={styles.inputboxx}>
-  </textarea>
-    </div>
-  </div>
+
     <div className={styles.submitplacement}>
       <button onClick={() => getdata(inp)} className={styles.submitbutton}>Submit</button>
     </div>
