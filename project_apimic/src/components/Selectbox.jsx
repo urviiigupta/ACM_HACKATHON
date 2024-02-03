@@ -5,6 +5,7 @@ const Selectbox=(props)=>{
     
     const handlelangsearch=(event)=>{
         setlangsearch(event.target.value)
+        props.handleSelectChange(event);
     }
 
     const filteredLanguages = props.languages.filter(language => 
@@ -13,12 +14,12 @@ const Selectbox=(props)=>{
 
     return(
         <>
-        <input value={langsearch} onChange={handlelangsearch}></input>
-        <select onChange={props.handleSelectChange}>
+        <input list="languages" value={langsearch} onChange={handlelangsearch} />
+        <datalist id="languages">
            {filteredLanguages.map((language) => {
-                return <option key={language.langcode} value={language.langcode}>{language.langname}</option>;
+                return <option key={language.langcode} value={language.langname}>{language.langname}</option>;
             })}
-        </select>
+        </datalist>
         </>
     )
 }
