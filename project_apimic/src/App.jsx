@@ -2,6 +2,8 @@ import { useState,useEffect } from 'react'
 import axios from "axios";
 import { v4 as uuidv4 } from 'uuid';
 import Selectbox from "./components/Selectbox"
+import styles from './App.module.css'
+import Navbar from './components/Navbar';
 function App() {
   const Datatosend={
     fromlang:"en",
@@ -97,18 +99,25 @@ axios({
   }
 }); }
  return(
-  <>
-  <select>
-
-  </select>
-  <input  value={inp.text} onChange={handleinpchange} style={{height:"100px", width:"200px"}}>
-  </input>
-  <Selectbox languages={Languages} handleSelectChange={handleSelectChangefrom}></Selectbox>
-  <Selectbox languages={Languages} handleSelectChange={handleSelectChangeto}></Selectbox>
-  <button onClick={() => getdata(inp)}>Submit</button>
+  <div className={styles.container}>
+    <Navbar>
+    </Navbar>
+  <div className={styles.flexcontainer}>
+    <div className={styles.flexelement}>
+      <Selectbox languages={Languages} handleSelectChange={handleSelectChangefrom} ></Selectbox>
+    <input  value={inp.text} onChange={handleinpchange} style={{height:"100px", width:"200px"}}>
+    </input>
+  </div>
+  <div className={styles.flexelement}>
+  <Selectbox languages={Languages} handleSelectChange={handleSelectChangeto} ></Selectbox>
+  
   <input  value={outp} style={{height:"100px", width:"200px"}}>
   </input>
-  </>
+    </div>
+  </div>
+
+  <button onClick={() => getdata(inp)}>Submit</button>
+  </div>
  )
 }
 

@@ -1,0 +1,28 @@
+.container
+{
+    height: 100%;
+    width: 100%;
+    background-color: aqua;
+}
+.flexcontainer
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: aqua
+}
+.flexelement
+{   display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 100%;
+    width: 100%; */
+    background-color: rgb(38, 0, 255);
+   
+    background-color: rgb(217, 255, 0);
+
+}
