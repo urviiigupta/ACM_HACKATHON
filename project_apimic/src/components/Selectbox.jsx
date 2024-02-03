@@ -15,7 +15,7 @@ const Selectbox=(props)=>{
         <input list={id} value={langsearch} onChange={handlelangsearch} />
         <datalist id={id}>
            {props.languages.map((language) => {
-                return <option key={language.langcode} className={styles.selectboxcss} value={language.langcode}>{language.langname}</option>;
+                return <option key={language.langcode} style={props.mystyle} value={language.langcode}>{language.langname}</option>;
             })}
         </datalist>
         </>

@@ -57,7 +57,7 @@ axios({
   
   console.log(response.data[0].translations[0].text);
   setoutp(response.data[0].translations[0].text);
-  setinp("")
+  
   
 }).catch(function(error) {
   if (error.response) {
@@ -74,6 +74,16 @@ axios({
     console.log('Error', error.message);
   }
 }); }
+
+const mystyle={
+   
+    width: "700px",
+    height: "100px",
+    backgroundColor: "blue",
+    color: "brown",
+    margin: "auto"
+  
+}
  return(
   <div className={styles.container}>
     <Navbar>
@@ -86,7 +96,7 @@ axios({
     </textarea>
   </div>
   <div className={styles.flexelement}>
-  <Selectbox languages={Languages} handleSelectChange={handleSelectChangeto} ></Selectbox>
+  <Selectbox languages={Languages} handleSelectChange={handleSelectChangeto} mystyle={mystyle}></Selectbox>
   
   <textarea  value={outp} className={styles.inputboxx}>
   </textarea>

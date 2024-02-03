@@ -30,7 +30,6 @@
 .inputboxx{
     height: 500px;
     width: 550px;
-    /* background-color: blue; */
     background-color: #242836;
     color: white;
     margin-top: 10px;
@@ -39,6 +38,8 @@
     vertical-align: top;
     word-wrap: break-word;
     outline: none;
+    overflow: auto; /* Add this line */
+    resize: none; 
 }
 
 .submitbutton{
