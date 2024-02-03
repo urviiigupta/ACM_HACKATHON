@@ -4,6 +4,8 @@ import { v4 as uuidv4 } from 'uuid';
 import Selectbox from "./components/Selectbox"
 import styles from './App.module.css'
 import Navbar from './components/Navbar';
+import Languages from './components/Languages';
+//https://urvii.cognitiveservices.azure.com/
 function App() {
   const Datatosend={
     fromlang:"en",
@@ -11,34 +13,6 @@ function App() {
     tolang:"es"
   }
 
-  const Languages=[
-    {
-      langname:"English",
-      langcode: "en" 
-      
-    },
-    {
-      langname:"Dutch",
-      langcode: "nl" 
-    },
-    {
-      langname:"French",
-      langcode: "fr" 
-    },
-    {
-      langname:"Japanese",
-      langcode: "ja" 
-    },
-    {
-      langname:"Hindi",
-      langcode: "hi" 
-     
-    },
-    {
-      langname:"Spanish",
-      langcode: "es" 
-    }
-  ]
   const [to,setto]=useState("nl");
   const [langfrom,setlangfrom]=useState("en");
   const [inp,setinp]=useState("please enter some text");
@@ -105,6 +79,7 @@ axios({
     <Navbar>
     </Navbar>
   <div className={styles.flexcontainer}>
+   
     <div className={styles.flexelement}>
       <Selectbox languages={Languages} handleSelectChange={handleSelectChangefrom} ></Selectbox>
     <input  value={inp} onChange={handleinpchange} style={{height:"100px", width:"200px"}}>
