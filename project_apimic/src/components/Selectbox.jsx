@@ -1,4 +1,6 @@
 import { useState } from "react";
+import styles from './Selectbox.module.css';
+
 
 const Selectbox=(props)=>{
     let [langsearch,setlangsearch]=useState("")
@@ -17,7 +19,7 @@ const Selectbox=(props)=>{
         <input list="languages" value={langsearch} onChange={handlelangsearch} />
         <datalist id="languages">
            {filteredLanguages.map((language) => {
-                return <option key={language.langcode} value={language.langname}>{language.langname}</option>;
+                return <option  className={styles.selectboxcss} key={language.langcode} value={language.langname} >{language.langname}</option>;
             })}
         </datalist>
         </>
