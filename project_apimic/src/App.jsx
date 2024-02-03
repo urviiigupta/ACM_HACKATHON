@@ -82,18 +82,19 @@ axios({
    
     <div className={styles.flexelement}>
       <Selectbox languages={Languages} handleSelectChange={handleSelectChangefrom} ></Selectbox>
-    <input  value={inp} onChange={handleinpchange} style={{height:"100px", width:"200px"}}>
-    </input>
+    <textarea  value={inp} onChange={handleinpchange} className={styles.inputboxx}>
+    </textarea>
   </div>
   <div className={styles.flexelement}>
   <Selectbox languages={Languages} handleSelectChange={handleSelectChangeto} ></Selectbox>
   
-  <input  value={outp} style={{height:"100px", width:"200px"}}>
-  </input>
+  <textarea  value={outp} className={styles.inputboxx}>
+  </textarea>
     </div>
   </div>
-
-  <button onClick={() => getdata(inp)}>Submit</button>
+    <div className={styles.submitplacement}>
+      <button onClick={() => getdata(inp)} className={styles.submitbutton}>Submit</button>
+    </div>
   </div>
  )
 }
