@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+
+
+body{
+  font-family: "Teko", sans-serif;
+}
+
+
+.cardbox{
+  /* background-color: aquamarine; */
+  height: 100%;
+  width: 24%;
+  margin-left: 4px;
+  margin-right: 4px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* justify-content: space-around; */
+  align-items: center;
+  border: 3px solid #00BADD;
+  border-radius: 10px;
+  padding: 7px;
+ 
+}
+.photopic{
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 8px 8px 8px 8px;
+}
+
+.cardname{
+  color: aqua;
+  font-family: monospace;
+  /* background-color: yellow; */
+}
+
+.cardlink{
+  /* background-color: red; */
+  color: white;
+  font-family: monospace;
+}
+
+a:link { 
+  text-decoration: none; 
+} 
+a:visited { 
+  text-decoration: none; 
+} 
+a:hover { 
+  text-decoration: none; 
+} 
+a:active { 
+  text-decoration: none; 
+}
+
+h1{
+  margin-top: 5%;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+h3{
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}

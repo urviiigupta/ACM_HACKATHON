@@ -90,3 +90,35 @@ body{
     justify-content: right;
     margin-right: 7px;
 }
+
+.aboutprojectbox{
+    width: 100%;
+    height: 500px;
+    margin-bottom: 200px;
+    /* background-color: #00BADD; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.meettheteam{
+    margin-top: 180px;
+    /* color: white; */
+    display: flex;
+    flex-direction: column;
+}
+
+.mttheading{
+    color: white;
+    margin-left: 2%;
+    font-size: 45px;
+}
+
+.textpara
+{
+    font: white !important;
+    font-size: 30px;
+    margin: 5px;
+    margin-top: 2px;
+}

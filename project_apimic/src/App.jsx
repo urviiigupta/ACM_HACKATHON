@@ -5,7 +5,13 @@ import Selectbox from "./components/Selectbox"
 import styles from './App.module.css'
 import Navbar from './components/Navbar';
 import Languages from './components/Languages';
-//https://urvii.cognitiveservices.azure.com/
+import Nexsuscard from './components/Nexsuscard';
+import diyad from './assets/diyad.jpeg'
+import pareshm from './assets/pm4.jpg'
+import pratyushk from './assets/pratyushk.jpeg'
+import urvig from './assets/uggg.jpg'
+
+
 function App() {
   const Datatosend={
     fromlang:"en",
@@ -21,7 +27,7 @@ function App() {
   let key = "fa204c207e8e4f919fe65a32aab41c90";
   let endpoint = "https://api.cognitive.microsofttranslator.com/";
   const OPENAI_API_KEY="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"
-const handleinpchange=(event)=>{
+  const handleinpchange=(event)=>{
   setinp(event.target.value)
   console.log(inp)
 }
@@ -137,7 +143,37 @@ axios({
     <div className={styles.submitplacement}>
       <button onClick={() => getdata(inp)} className={styles.submitbutton}>Submit</button>
     </div>
-  </div>
+    <div>
+      <div className={styles.meettheteam}>
+        <div className={styles.mttheading} >
+        MEET THE TEAM
+        </div>
+      <div className={styles.aboutprojectbox}>
+        <Nexsuscard imagelink={diyad} pname={"Diya Dugar"} gitlink={"https://github.com/Diyadx"} gitdis={"@diyadx"}></Nexsuscard>
+        <Nexsuscard imagelink={pareshm} pname={"Paresh Malviya"} gitlink={"https://github.com/Pareshm004"} gitdis={"@pareshm004"}></Nexsuscard>
+        <Nexsuscard imagelink={pratyushk} pname={"Pratyush Kamal"} gitlink={"https://github.com/pratyush0000"} gitdis={"@pratyush0000"}></Nexsuscard>
+        <Nexsuscard imagelink={urvig} pname={"Urvi Gupta"} gitlink={"https://github.com/urviiigupta"} gitdis={"@urviiigupta"}></Nexsuscard>
+      </div>
+      </div>
+
+      <div className={styles.meettheteam}>
+        <div className={styles.mttheading}>
+        PROJECT
+        </div>
+
+        <div className={styles.textpara}>
+          Welcome to Babel, a convergence of linguistic artistry and cutting-edge technology. Our name, inspired by the Tower of Babel from the Book of Genesis, symbolizes our commitment to transcending language barriers and reaching new heights in communication.
+
+            At Babel, we redefine the art of translation by seamlessly integrating advanced AI technologies. Our mission is to not merely translate text but to preserve the original meaning and emotion, ensuring a nuanced and faithful rendition. Unlike conventional methods, our sophisticated linguistic models go beyond line-by-line translation, providing a comprehensive solution for text, paragraphs, and phrases.
+
+            Our platform stands as a testament to the symbiotic relationship between art and technology. With a focus on precision and innovation, Babel transforms language translation into an immersive experience. As we delve into the realms of literature, our vision expands beyond linguistic conversion. We aim to make technology a gateway to accessibility, offering features such as the transformation of entire PDFs and the utilization of generative AI for image retrieval from plays.
+
+            Babel is more than a translation service; it's a paradigm shift in linguistic innovation. Join us on this journey to unlock the true potential of language and technology. Together, let's elevate communication to new heights at Babel.</div>
+      </div>
+      </div>
+
+    </div>
+
  )
 }
 
