@@ -33,8 +33,10 @@
     background-color: #242836;
     color: white;
     margin-top: 10px;
+    margin-right: 0px;
+    margin-left: 0px;
     border-radius: 10px;
-    border-color: #00BADD;
+    border: 5px solid #00BADD;
     vertical-align: top;
     word-wrap: break-word;
     outline: none;
@@ -64,4 +66,10 @@
 body{
     /* background-color: purple; */
     background-color: #242836;
+}
+
+.flexcontainerlang
+{
+    display: flex;
+    flex-direction: row;
 }

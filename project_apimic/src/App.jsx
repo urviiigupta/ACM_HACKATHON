@@ -75,15 +75,7 @@ axios({
   }
 }); }
 
-const mystyle={
-   
-    width: "700px",
-    height: "100px",
-    backgroundColor: "blue",
-    color: "brown",
-    margin: "auto"
-  
-}
+
  return(
   <div className={styles.container}>
     <Navbar>
@@ -91,13 +83,22 @@ const mystyle={
   <div className={styles.flexcontainer}>
    
     <div className={styles.flexelement}>
-      <Selectbox languages={Languages} handleSelectChange={handleSelectChangefrom} ></Selectbox>
+      <div className={styles.flexcontainerlang}>
+      <div >
+        FROM : 
+      </div>
+      <Selectbox languages={Languages} handleSelectChange={handleSelectChangefrom}></Selectbox>
+      </div>
     <textarea  value={inp} onChange={handleinpchange} className={styles.inputboxx}>
     </textarea>
   </div>
   <div className={styles.flexelement}>
-  <Selectbox languages={Languages} handleSelectChange={handleSelectChangeto} mystyle={mystyle}></Selectbox>
-  
+    <div className={styles.flexcontainerlang} >
+      <div >
+        TO: 
+      </div>
+  <Selectbox languages={Languages} handleSelectChange={handleSelectChangeto}></Selectbox>
+  </div>
   <textarea  value={outp} className={styles.inputboxx}>
   </textarea>
     </div>
