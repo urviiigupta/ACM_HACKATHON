@@ -84,8 +84,8 @@ axios({
    
     <div className={styles.flexelement}>
       <div className={styles.flexcontainerlang}>
-      <div >
-        FROM : 
+      <div className={styles.messagetofrom}>
+        FROM: 
       </div>
       <Selectbox languages={Languages} handleSelectChange={handleSelectChangefrom}></Selectbox>
       </div>
@@ -94,7 +94,7 @@ axios({
   </div>
   <div className={styles.flexelement}>
     <div className={styles.flexcontainerlang} >
-      <div >
+      <div className={styles.messagetofrom}>
         TO: 
       </div>
   <Selectbox languages={Languages} handleSelectChange={handleSelectChangeto}></Selectbox>
