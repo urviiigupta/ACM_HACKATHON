@@ -13,12 +13,13 @@ function App() {
 
   const Languages=[
     {
-      langname:"Dutch",
-      langcode: "nl" 
-    },
-    {
       langname:"English",
       langcode: "en" 
+      
+    },
+    {
+      langname:"Dutch",
+      langcode: "nl" 
     },
     {
       langname:"French",
@@ -38,9 +39,9 @@ function App() {
       langcode: "es" 
     }
   ]
-  const [to,setto]=useState("");
-  const [langfrom,setlangfrom]=useState("");
-  const [inp,setinp]=useState(Datatosend);
+  const [to,setto]=useState("nl");
+  const [langfrom,setlangfrom]=useState("en");
+  const [inp,setinp]=useState("please enter some text");
   const [outp,setoutp]=useState("");
   let key = "fa204c207e8e4f919fe65a32aab41c90";
   let endpoint = "https://api.cognitive.microsofttranslator.com/";
@@ -82,6 +83,7 @@ axios({
   
   console.log(response.data[0].translations[0].text);
   setoutp(response.data[0].translations[0].text);
+  setinp("")
   
 }).catch(function(error) {
   if (error.response) {
@@ -105,7 +107,7 @@ axios({
   <div className={styles.flexcontainer}>
     <div className={styles.flexelement}>
       <Selectbox languages={Languages} handleSelectChange={handleSelectChangefrom} ></Selectbox>
-    <input  value={inp.text} onChange={handleinpchange} style={{height:"100px", width:"200px"}}>
+    <input  value={inp} onChange={handleinpchange} style={{height:"100px", width:"200px"}}>
     </input>
   </div>
   <div className={styles.flexelement}>
