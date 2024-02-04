@@ -10,7 +10,6 @@ import diyad from './assets/diyad.jpeg'
 import pareshm from './assets/pm4.jpg'
 import pratyushk from './assets/pratyushk.jpeg'
 import urvig from './assets/uggg.jpg'
-import { Link as ScrollLink, Element } from 'react-scroll';
 
 
 function App() {
