@@ -21,12 +21,12 @@ function App() {
 
   const [to,setto]=useState("nl");
   const [langfrom,setlangfrom]=useState("en");
-  const [inp,setinp]=useState("");
+  const [inp,setinp]=useState("please enter some text");
   const [outp,setoutp]=useState("");
   const [chatoutp,setchatoutp]=useState("")
   let key = "fa204c207e8e4f919fe65a32aab41c90";
   let endpoint = "https://api.cognitive.microsofttranslator.com/";
-  const OPENAI_API_KEY="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"
+  const OPENAI_API_KEY="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"
   const handleinpchange=(event)=>{
   setinp(event.target.value)
   console.log(inp)
@@ -122,7 +122,7 @@ axios({
   <div className={styles.container}>
     <Navbar>
     </Navbar>
-  <div id="section1" className={styles.flexcontainer}>
+  <div className={styles.flexcontainer}>
    
     <div className={styles.flexelement}>
       <div className={styles.flexcontainerlang}>
@@ -131,7 +131,7 @@ axios({
       </div>
       <Selectbox languages={Languages} handleSelectChange={handleSelectChangefrom}></Selectbox>
       </div>
-    <textarea  value={inp} onChange={handleinpchange} className={styles.inputboxx} placeholder="Enter text to convert: ">
+    <textarea  value={inp} onChange={handleinpchange} className={styles.inputboxx}>
     </textarea>
   </div>
   <div className={styles.flexelement}>
@@ -159,15 +159,14 @@ axios({
           <div className={styles.textpara}>
           <br/>
         
-          Welcome to <b>Babel</b>, the fusion of linguistic artistry and cutting-edge technology inspired by the Tower of Babel from the <i>Book of Genesis</i>. Our commitment is clear – to transcend language barriers and propel communication to new heights. At Babel, we redefine the art of translation through the seamless integration of advanced AI technologies.
+          Welcome to Babel, the fusion of linguistic artistry and cutting-edge technology inspired by the Tower of Babel from the Book of Genesis. Our commitment is clear – to transcend language barriers and propel communication to new heights. At Babel, we redefine the art of translation through the seamless integration of advanced AI technologies.
           
-          Our mission goes beyond mere translation; we aspire to preserve the original meaning and emotion in a nuanced and faithful rendition. Unlike traditional methods, our platform utilizes sophisticated linguistic models that extend beyond line-by-line translation, providing a comprehensive solution for text, paragraphs, and phrases.
+            Our mission goes beyond mere translation; we aspire to preserve the original meaning and emotion in a nuanced and faithful rendition. Unlike traditional methods, our platform utilizes sophisticated linguistic models that extend beyond line-by-line translation, providing a comprehensive solution for text, paragraphs, and phrases.
 
-          The core of Babel lies in the symbiotic relationship between art and technology. Precision and innovation are our guiding principles as we transform language translation into an immersive experience. The intricate dance between human expression and computational power is reflected in our approach, ensuring a harmonious blend that enhances understanding.
+            The core of Babel lies in the symbiotic relationship between art and technology. Precision and innovation are our guiding principles as we transform language translation into an immersive experience. The intricate dance between human expression and computational power is reflected in our approach, ensuring a harmonious blend that enhances understanding.
 
-          As we venture into the realms of literature, our vision expands beyond linguistic conversion. Babel aims to make technology a gateway to accessibility. We introduce features such as the transformation of entire PDFs, demonstrating a commitment to practicality and user-friendly solutions. Furthermore, the utilization of generative AI for image retrieval from plays showcases our dedication to pushing the boundaries of what technology can achieve in the realm of language.
-          Babel is not just a translation service; it signifies a paradigm shift in linguistic innovation. Join us on this journey to unlock the true potential of language and technology. Together, let's elevate communication to new heights at Babel, where the convergence of art and technology creates a transformative and inclusive linguistic experience.
-
+            As we venture into the realms of literature, our vision expands beyond linguistic conversion. Babel aims to make technology a gateway to accessibility. We introduce features such as the transformation of entire PDFs, demonstrating a commitment to practicality and user-friendly solutions. Furthermore, the utilization of generative AI for image retrieval from plays showcases our dedication to pushing the boundaries of what technology can achieve in the realm of language.
+            Babel is not just a translation service; it signifies a paradigm shift in linguistic innovation. Join us on this journey to unlock the true potential of language and technology. Together, let's elevate communication to new heights at Babel, where the convergence of art and technology creates a transformative and inclusive linguistic experience.
           
           </div>
         </div>
