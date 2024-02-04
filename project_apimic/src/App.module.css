@@ -23,7 +23,7 @@ body{
     align-items: center;
     height: 570px;
     width: 100%;
-    /* background-color: aquas */
+    /* background-color: aqua; */
 }
 .flexelement
 {   display: flex;
@@ -40,18 +40,20 @@ body{
 .inputboxx{
     height: 500px;
     width: 550px;
-    background-color: #242836;
+    /* background-color: #242836; */
+    background-color: #1c1f25;
     color: white;
     margin-top: 10px;
     margin-right: 0px;
     margin-left: 0px;
     border-radius: 10px;
-    border: 3px solid #00BADD;
+    border: 2px solid #00BADD;
     vertical-align: top;
     word-wrap: break-word;
     outline: none;
     overflow: auto; /* Add this line */
     resize: none; 
+    padding: 8px;
 }
 
 .submitbutton {
@@ -127,6 +129,7 @@ body{
     /* color: white; */
     display: flex;
     flex-direction: column;
+    /* background-color: greenyellow; */
 }
 
 .mttheading{
