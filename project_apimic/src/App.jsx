@@ -143,12 +143,33 @@ axios({
     <div className={styles.submitplacement}>
       <button onClick={() => getdata(inp)} className={styles.submitbutton}>Submit</button>
     </div>
-    <div>
+    
+    <div className={styles.sectwobg}>
       <div className={styles.meettheteam}>
-        <div className={styles.mttheading} >
+          <div id="section2" className={styles.mttheading2}>
+          PROJECT
+          </div>
+
+          <div className={styles.textpara}>
+          <br/>
+        
+          Welcome to Babel, the fusion of linguistic artistry and cutting-edge technology inspired by the Tower of Babel from the Book of Genesis. Our commitment is clear – to transcend language barriers and propel communication to new heights. At Babel, we redefine the art of translation through the seamless integration of advanced AI technologies.
+          
+            Our mission goes beyond mere translation; we aspire to preserve the original meaning and emotion in a nuanced and faithful rendition. Unlike traditional methods, our platform utilizes sophisticated linguistic models that extend beyond line-by-line translation, providing a comprehensive solution for text, paragraphs, and phrases.
+
+            The core of Babel lies in the symbiotic relationship between art and technology. Precision and innovation are our guiding principles as we transform language translation into an immersive experience. The intricate dance between human expression and computational power is reflected in our approach, ensuring a harmonious blend that enhances understanding.
+
+            As we venture into the realms of literature, our vision expands beyond linguistic conversion. Babel aims to make technology a gateway to accessibility. We introduce features such as the transformation of entire PDFs, demonstrating a commitment to practicality and user-friendly solutions. Furthermore, the utilization of generative AI for image retrieval from plays showcases our dedication to pushing the boundaries of what technology can achieve in the realm of language.
+            Babel is not just a translation service; it signifies a paradigm shift in linguistic innovation. Join us on this journey to unlock the true potential of language and technology. Together, let's elevate communication to new heights at Babel, where the convergence of art and technology creates a transformative and inclusive linguistic experience.
+          
+          </div>
+        </div>
+    </div>
+      <div className={styles.meettheteam}>
+        <div className={styles.mttheading} id="section3" >
         MEET THE TEAM
         </div>
-      <div className={styles.aboutprojectbox}>
+        <div className={styles.aboutprojectbox}>
         <Nexsuscard imagelink={diyad} pname={"Diya Dugar"} gitlink={"https://github.com/Diyadx"} gitdis={"@diyadx"}></Nexsuscard>
         <Nexsuscard imagelink={pareshm} pname={"Paresh Malviya"} gitlink={"https://github.com/Pareshm004"} gitdis={"@pareshm004"}></Nexsuscard>
         <Nexsuscard imagelink={pratyushk} pname={"Pratyush Kamal"} gitlink={"https://github.com/pratyush0000"} gitdis={"@pratyush0000"}></Nexsuscard>
@@ -156,23 +177,9 @@ axios({
       </div>
       </div>
 
-      <div className={styles.meettheteam}>
-        <div className={styles.mttheading}>
-        PROJECT
-        </div>
-
-        <div className={styles.textpara}>
-          Welcome to Babel, a convergence of linguistic artistry and cutting-edge technology. Our name, inspired by the Tower of Babel from the Book of Genesis, symbolizes our commitment to transcending language barriers and reaching new heights in communication.
-
-            At Babel, we redefine the art of translation by seamlessly integrating advanced AI technologies. Our mission is to not merely translate text but to preserve the original meaning and emotion, ensuring a nuanced and faithful rendition. Unlike conventional methods, our sophisticated linguistic models go beyond line-by-line translation, providing a comprehensive solution for text, paragraphs, and phrases.
-
-            Our platform stands as a testament to the symbiotic relationship between art and technology. With a focus on precision and innovation, Babel transforms language translation into an immersive experience. As we delve into the realms of literature, our vision expands beyond linguistic conversion. We aim to make technology a gateway to accessibility, offering features such as the transformation of entire PDFs and the utilization of generative AI for image retrieval from plays.
-
-            Babel is more than a translation service; it's a paradigm shift in linguistic innovation. Join us on this journey to unlock the true potential of language and technology. Together, let's elevate communication to new heights at Babel.</div>
-      </div>
+     
       </div>
 
-    </div>
 
  )
 }

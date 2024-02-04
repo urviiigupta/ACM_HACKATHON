@@ -1,17 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
 
-.nav
-{
-    height: 70px;
-    width: 100%;
-    font-family: "Teko", sans-serif;
-    
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* background-color: white; */
-    
+.nav {
+  height: 70px;
+  width: 100%;
+  font-family: "Teko", sans-serif;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: white; */
+  background-color: #242836;
+
+  position: fixed; /* Add this line */
+  top: 0; /* Add this line */
+  z-index: 100; /* Optional: this ensures the navbar stays on top of other elements */
 }
+
+
 ul{
     /* flex: 1; */
     margin-right: 40px;
@@ -40,3 +45,17 @@ ul li{
     height: 70px;
     margin-top: 4px;
 }
+
+.removea
+{
+    text-decoration: none;
+    color: #00BADD;
+    font-size: 28px;
+    font-weight: 500;
+    font-family: "Teko", sans-serif;
+}
+
+.removea:hover {
+    color: rgb(255, 255, 255); /* Change the color on hover */
+    
+  }

@@ -7,9 +7,9 @@ const Navbar=()=>{
             <img src={logo} alt="" className={styles.logo}/>
             </div>
             <ul>
-            <li>HOME</li>
-            <li>PROJECT</li>
-            <li>TEAM</li>
+            <li><a  className={styles.removea} href="#section1">HOME</a></li>
+            <li><a className={styles.removea} href="#section2">PROJECT</a></li>
+            <li><a className={styles.removea} href="#section3">ABOUT US</a></li>
             </ul>
         </nav>
     )
