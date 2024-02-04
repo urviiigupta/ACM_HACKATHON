@@ -122,7 +122,7 @@ axios({
   <div className={styles.container}>
     <Navbar>
     </Navbar>
-  <div className={styles.flexcontainer}>
+  <div id="section1" className={styles.flexcontainer}>
    
     <div className={styles.flexelement}>
       <div className={styles.flexcontainerlang}>
