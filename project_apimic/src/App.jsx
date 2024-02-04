@@ -26,7 +26,7 @@ function App() {
   const [chatoutp,setchatoutp]=useState("")
   let key = "fa204c207e8e4f919fe65a32aab41c90";
   let endpoint = "https://api.cognitive.microsofttranslator.com/";
-  const OPENAI_API_KEY="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"
+  const OPENAI_API_KEY="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"
   const handleinpchange=(event)=>{
   setinp(event.target.value)
   console.log(inp)
@@ -92,20 +92,26 @@ axios({
     setchatoutp(response.data.choices[0].message.content);
   })
   .catch(error => {
-    console.error(error);
+    console.log(error)
+    console.log(outp)
+    setchatoutp(outp)
+    
   });
   
 }).catch(function(error) {
   if (error.response) {
+    setchatoutp(outp)
     // The request was made and the server responded with a status code
     // that falls out of the range of 2xx
     console.log(error.response.data);
     console.log(error.response.status);
     console.log(error.response.headers);
   } else if (error.request) {
+    setchatoutp(outp)
     // The request was made but no response was received
     console.log(error.request);
   } else {
+    setchatoutp(outp)
     // Something happened in setting up the request that triggered an Error
     console.log('Error', error.message);
   }
@@ -135,7 +141,7 @@ axios({
       </div>
       <Selectbox languages={Languages} handleSelectChange={handleSelectChangeto}></Selectbox>
       </div>
-      <textarea  value={chatoutp} className={styles.inputboxx}>
+      <textarea  value={chatoutp || outp} className={styles.inputboxx}>
       </textarea>
       </div>
   </div>
