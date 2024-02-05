@@ -26,7 +26,7 @@ function App() {
   const [chatoutp,setchatoutp]=useState("")
   let key = "fa204c207e8e4f919fe65a32aab41c90";
   let endpoint = "https://api.cognitive.microsofttranslator.com/";
-  const OPENAI_API_KEY="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"
+  const OPENAI_API_KEY="************************************"
   const handleinpchange=(event)=>{
   setinp(event.target.value)
   console.log(inp)
